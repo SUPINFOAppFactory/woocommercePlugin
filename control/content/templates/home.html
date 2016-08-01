@@ -1,0 +1,91 @@
+<div id="carousel"></div>
+<hr>
+<div class="item clearfix row">
+    <div class="labels col-md-3 padding-right-zero pull-left">
+        <span>Text</span>
+    </div>
+</div>
+<hr class="none">
+<div class="item clearfix row">
+    <div class="main col-md-12 pull-right">
+        <textarea id="text" ui-tinymce="ContentHome.bodyWYSIWYGOptions"
+                  class="form-control" rows="5" width="100%"
+                  ng-model="ContentHome.data.content.description"></textarea>
+    </div>
+</div>
+<hr>
+<div class="item clearfix row">
+    <div class="labels col-md-3 padding-right-zero pull-left">
+
+    </div>
+    <div class="main col-md-9 pull-right">
+        <p class="margin-bottom-zero">1. Start with WooCommerce in <a ng-click="ContentHome.wooCommerceStepsURL()">5 Steps</a>.</p>
+    </div>
+    <div class="main col-md-9 pull-right">
+        <p class="margin-bottom-zero">2. You also need to be running WordPress on a self-hosted site. Click <a ng-click="ContentHome.wooCommerceSelfHostURL()">here</a> for more information.</p>
+    </div>
+    <div class="main col-md-9 pull-right">
+        <p class="margin-bottom-zero">3. For instructions on how to attain your API keys click
+            <a ng-click="ContentHome.wooCommerceAPIKeysUrl()">Here</a>.
+        </p>
+    </div>
+</div>
+<hr class="none">
+<div class="item clearfix row">
+    <div class="labels col-md-3 padding-right-zero pull-left">
+        <span>Store Url</span>
+    </div>
+    <div class="main col-md-9 pull-right">
+        <input type="text" class="form-control"
+               placeholder="Enter your store url (eg: http://example.com)"
+               ng-model="ContentHome.storeURL"
+               ng-change="ContentHome.clearData()">
+    </div>
+</div>
+<hr class="none">
+<div class="item clearfix row">
+    <div class="labels col-md-3 padding-right-zero pull-left">
+        <span>Consumer Key</span>
+    </div>
+    <div class="main col-md-9 pull-right">
+        <input type="text" class="form-control"
+               placeholder="Enter your consumer key"
+               ng-model="ContentHome.consumerKey"
+               ng-change="ContentHome.clearData()">
+    </div>
+</div>
+<hr class="none">
+<div class="item clearfix row">
+    <div class="labels col-md-3 padding-right-zero pull-left">
+        <span>Consumer Secret</span>
+    </div>
+    <div class="main col-md-9 pull-right">
+        <input type="text" class="form-control"
+               placeholder="Enter your consumer secret"
+               ng-model="ContentHome.consumerSecret"
+               ng-change="ContentHome.clearData()">
+    </div>
+    </div>
+    <hr class="none">
+<div class="item clearfix row">
+    <div class="col-md-4 pull-right">
+        <button class="btn btn-primary pull-right stretch"
+                ng-disabled="!ContentHome.storeURL || !ContentHome.consumerKey || !ContentHome.consumerSecret" ng-click="ContentHome.verifyStore()">
+            Done</button>
+    </div>
+    </div>
+</div>
+<hr class="none">
+<div class="item clearfix row">
+    <div class="labels col-md-3 padding-right-zero pull-left">
+    </div>
+    <div class="main col-md-9 pull-right" ng-if="ContentHome.storeVerifySuccess">
+        <div class="alert alert-sm alert-success text-center">All credentials verified
+        </div>
+    </div>
+    <div class="main col-md-9 pull-right" ng-if="ContentHome.storeVerifyFailure">
+        <div class="alert alert-sm alert-danger text-center">Please enter
+            valid credentials
+        </div>
+    </div>
+</div>

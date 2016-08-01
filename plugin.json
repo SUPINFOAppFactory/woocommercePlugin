@@ -1,0 +1,25 @@
+{
+  "author":"SUPINFO AppFactory"
+,"pluginName":"WooCommerce Integration"
+,"pluginDescription":"The world's favorite eCommerce solution that gives you complete control to sell anything.Related Topics: Bigcartel"
+,"supportEmail":"supinfoappfactory@supinfo.com"
+,"supportSite":"http://support.appdocumentation.com/knowledge-base/woocommerce-plugin-tutorial/"
+,"pluginIcon": "icon.png"
+,"offlineModeEnabled": true
+,"control":{
+  "content":{
+    "enabled":true
+  }
+, "design":{
+    "enabled":true
+  }
+, "settings":{
+    "enabled":true
+  }
+}
+,"widget":{
+
+},
+  "features" : [],
+  "languages" : ["en"]
+}

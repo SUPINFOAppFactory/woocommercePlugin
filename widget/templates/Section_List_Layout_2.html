@@ -1,0 +1,42 @@
+<div class="holder has-bottom padding-zero sticky-bottom-menu">
+    <div class="ecommerce-plugin layout3 scrollable infinite-scroll-parent">
+        <div class="media-center-banner plugin-banner clearfix">
+            <div id="carousel" ng-if="WidgetHome.data.content.carouselImages.length"
+                 build-fire-carousel=""
+                 ng-style="WidgetHome.data.content.carouselImages.length > 0 ? {'min-height': (9 * deviceWidth / 16) + 'px' } : {}"></div>
+        </div>
+        <div class="padded padding-bottom-zero" ng-if="WidgetHome.showDescription(WidgetHome.data.content.description)">
+            <p ng-bind-html='WidgetHome.safeHtml(WidgetHome.data.content.description)'></p>
+        </div>
+        <div ng-if="WidgetHome.data">
+            <div class="media-layout" infinite-scroll="WidgetHome.loadMore()"
+                 infinite-scroll-distance="1"
+                 data-infinite-container=".infinite-scroll-parent"
+                 infinite-scroll-disabled="WidgetHome.busy">
+                <div class="media-item col-sm-6 padding-zero"
+                     ng-repeat="section in WidgetHome.sections">
+                    <div class="media-holder border-radius-three overflow-hidden">
+                        <div class="media-img-holder" style="min-height: 194px;">
+                            <img ng-if="!section.image"
+                                 src="../../../styles/media/holder-239x1.png" ng-click="WidgetHome.showItems(section.slug)">
+                            <img load-image="239x1" crop-width="640" crop-height="380" crop-type="crop"
+                                 data-final-src="{{section.image}}"
+                                 ng-if="section.image" ng-click="WidgetHome.showItems(section.slug)">
+                        </div>
+                        <div class="info-bar titleBarBackgroundTheme padding-left-ten text-center padding-right-ten cursor"
+                             ng-click="WidgetHome.showItems(section.slug)">
+                            <p class="ellipsis margin-zero titleBarTextAndIcons">
+                                <a class="titleBarTextAndIcons" href="javascript:void(0);">{{section.name}}</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom fixed-bottom border-top-grey clearfix bottom-zero">
+        <div class="col-xs-12 pull-left text-center">
+            <a class="whiteTheme bg-primary transition-third" href="javascript:void(0);"
+               ng-click="WidgetHome.goToCart()">Go to Cart</a>
+        </div>
+    </div>
+</div>
