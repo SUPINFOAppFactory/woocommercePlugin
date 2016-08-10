@@ -22,7 +22,7 @@ In addition of these we would explore some of the angularJs and jquery based. Th
 
 **Refreshing:** Refresh will be enabled for this plugin. 
 
-**Styling:** UI Design will be done using [BuildFire-Style-Helper-Documentation](https://github.com/BuildFire/sdk/wiki/BuildFire-Style-Helper-Documentation). It has pre build style classes that we can use to improve UX of the plugin.
+**Styling:** UI Design will be done using [BuildFire-Style-Helper-Documentation](https://github.com/SUPINFOAppFactory/sdk-master/wiki/BuildFire-Style-Helper-Documentation). It has pre build style classes that we can use to improve UX of the plugin.
 
 ### 3. DataBase Model: 
 Database model is not directly exposed to the user. BuildFire provides buildfire.datastore to fetch and update data on server. It is black box for user. Think of it like for every user there will be separate database. The database should be unique as appId,pluginId, instanceId, tag and obj. Here the composite key of appId and pluginId should be every single app.
