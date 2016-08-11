@@ -3,7 +3,7 @@
 The world's favorite eCommerce solution that gives you complete control to sell anything.Related Topics: Bigcartel
 
 ### Plugin overview
-http://support.appdocumentation.com/knowledge-base/woocommerce-plugin-tutorial/
+http://support.appdocumentation.com/knowledge-base/woocommerce-plugin-tutorial
 
 ## 1. Architecture/Technology stacks:
 
