@@ -2,6 +2,9 @@
 
 The world's favorite eCommerce solution that gives you complete control to sell anything.Related Topics: Bigcartel
 
+### Plugin overview
+http://support.appdocumentation.com/knowledge-base/woocommerce-plugin-tutorial/
+
 ## 1. Architecture/Technology stacks:
 
 The entire app would be built on Angularjs and BuildFire. Here in angularjs we will follow MVVM design pattern. BuildFire provide us multiple method by which we can fetch and update information on server. Methods included are 
